@@ -1,5 +1,5 @@
 """
-Convergence — Core Simulation Engine
+The Carpathian Crescent — Core Simulation Engine
 
 Orchestrates the full multi-era simulation: nation state, D-coefficient,
 convergence map, institutional DNA, events, and era transitions.
@@ -594,7 +594,7 @@ class SimulationEngine:
         If auto_policy=True, applies a basic policy mix automatically 
         (for testing/balancing). Otherwise, only passive changes occur.
         """
-        log_lines = [f"═══ CONVERGENCE SIMULATION: {self.nation_data['name']} ═══"]
+        log_lines = [f"═══ THE CARPATHIAN CRESCENT: {self.nation_data['name']} ═══"]
         log_lines.append(f"Starting year: 1918 | D-coefficient: {self.state.d_coefficient:.1f}")
         log_lines.append(f"Legacy: {self.nation_data['era1_start']['institutional_legacy']}")
         log_lines.append("")

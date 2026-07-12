@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run a Convergence simulation from the command line.
+Run a Carpathian Crescent simulation from the command line.
 
 Usage:
     python3 -m sim.run --nation moravia_nord

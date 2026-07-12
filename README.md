@@ -1,4 +1,4 @@
-# Convergence
+# The Carpathian Crescent
 
 **A deep systems simulation of development economics set in a fictional Eastern Europe across 100 years.**
 
@@ -6,7 +6,7 @@ Guide a nation from the rubble of empire (1918) through industrialization to mar
 
 ---
 
-## The Fictional World: The Carpathian Crescent
+## The Carpathian Crescent
 
 Five composite nations embodying real Eastern European development archetypes:
 

@@ -1,5 +1,5 @@
 """
-Convergence — Development Economics Simulation Game
+The Carpathian Crescent — Development Economics Simulation Game
 
 A deep systems simulation where you guide a fictional Eastern European
 nation across 100 years of development.
