@@ -1,0 +1,13 @@
+# ╔══════════════════════════════════════════╗
+# ║  VELES — Fable-5 × DeepSeek Hybrid      ║
+# ║  H Heuristics AI Agent Pipeline          ║
+# ╚══════════════════════════════════════════╝
+# Auto-detects DEEPSEEK_API_KEY. No manual setup.
+
+[fable]
+provider = "openai-compatible"
+model = "deepseek-v4-pro"
+base_url = "https://api.deepseek.com/v1"
+memory_backend = "sqlite"
+max_iterations = 20
+max_delegations = 8

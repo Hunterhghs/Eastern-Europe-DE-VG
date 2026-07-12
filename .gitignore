@@ -1,0 +1,10 @@
+node_modules/
+.fable/
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+.python-packages/

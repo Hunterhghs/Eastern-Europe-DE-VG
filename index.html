@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convergence — Development Economics Simulation</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --gold: #f59e0b;
+            --warn: #ef4444;
+            --green: #22c55e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid #334155;
+        }
+        .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { color: var(--muted); font-size: 1.25rem; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 3rem 2rem; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .kpi-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #334155;
+        }
+        .kpi-card .label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .kpi-card .value { font-size: 1.75rem; font-weight: 700; margin-top: 0.25rem; }
+        .kpi-card .delta { font-size: 0.85rem; margin-top: 0.25rem; }
+        .delta.up { color: var(--green); }
+        .delta.down { color: var(--warn); }
+        .nations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+        .nation-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #334155;
+            transition: border-color 0.2s;
+        }
+        .nation-card:hover { border-color: var(--accent); }
+        .nation-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .nation-card .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.75rem; }
+        .nation-card .d-value { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+        .era-section { margin: 3rem 0; }
+        .era-section h2 { font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #334155; }
+        .era-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+        }
+        .era-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #334155;
+            border-left: 4px solid var(--accent);
+        }
+        .era-card h3 { margin-bottom: 0.5rem; }
+        .era-card .years { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .era-card .mechanics { color: var(--muted); font-size: 0.9rem; margin-top: 0.75rem; }
+        .era-card .mechanics li { margin: 0.25rem 0; }
+        .status { text-align: center; padding: 2rem; background: var(--surface); border-radius: 12px; border: 1px solid #334155; }
+        .status .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin: 0.5rem;
+        }
+        .badge.engine { background: #15803d33; color: #4ade80; border: 1px solid #15803d; }
+        .badge.ui { background: #b4530933; color: #fbbf24; border: 1px solid #b45309; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1><span>Convergence</span></h1>
+        <p>A deep systems simulation of development economics set in a fictional Eastern Europe across 100 years.</p>
+    </div>
+
+    <div class="container">
+        <div class="status">
+            <h2>Project Status</h2>
+            <p style="color: var(--muted); margin: 0.5rem 0 1rem;">Simulation engine complete — interactive UI coming soon.</p>
+            <span class="badge engine">✅ Simulation Engine v0.1</span>
+            <span class="badge ui">🚧 Interactive UI (coming soon)</span>
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="label">Nations</div>
+                <div class="value">5</div>
+                <div class="delta up">Fictional Eastern European</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Time Span</div>
+                <div class="value">108 yr</div>
+                <div class="delta up">1918–2025</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Eras</div>
+                <div class="value">3</div>
+                <div class="delta up">Nation-Building → Planned → Market</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Policies</div>
+                <div class="value">15</div>
+                <div class="delta up">Infrastructure to EU Accession</div>
+            </div>
+            <div class="kpi-card">
+                <div class="label">Crisis Types</div>
+                <div class="value">14</div>
+                <div class="delta down">Financial Panic to Regime Change</div>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">The Carpathian Crescent — Five Nations</h2>
+        <div class="nations">
+            <div class="nation-card">
+                <h3>Moravia-Nord</h3>
+                <div class="meta">2.8M · Coastal · Austro-Hungarian Legacy</div>
+                <div class="d-value">D: 41.5</div>
+                <div class="meta" style="margin-top:0.5rem">Strong institutions, port access, high literacy. The easiest start — but hubris kills.</div>
+            </div>
+            <div class="nation-card">
+                <h3>Zaleskia</h3>
+                <div class="meta">8.2M · Landlocked · Coal & Iron Rich</div>
+                <div class="d-value">D: 26.0</div>
+                <div class="meta" style="margin-top:0.5rem">Industrial powerhouse potential. Multi-ethnic, resource-dependent. The heavy-lift challenge.</div>
+            </div>
+            <div class="nation-card">
+                <h3>Livonia-Podolia</h3>
+                <div class="meta">5.1M · Fertile Plains · Ottoman Legacy</div>
+                <div class="d-value">D: 14.0</div>
+                <div class="meta" style="margin-top:0.5rem">Poorest start. Weak institutions, landed elite. The underdog — highest potential upside.</div>
+            </div>
+            <div class="nation-card">
+                <h3>Vynahrad Republic</h3>
+                <div class="meta">3.4M · Mountainous · Oil Reserves</div>
+                <div class="d-value">D: 12.0</div>
+                <div class="meta" style="margin-top:0.5rem">Resource curse risk. Extractive institutions. Strategic chokepoint. Highest risk/reward.</div>
+            </div>
+            <div class="nation-card">
+                <h3>Karpathia</h3>
+                <div class="meta">1.6M · Alpine · Transit Crossroads</div>
+                <div class="d-value">D: 22.0</div>
+                <div class="meta" style="margin-top:0.5rem">Small, nimble, multi-ethnic. Alpine communal traditions. The boutique nation.</div>
+            </div>
+        </div>
+
+        <div class="era-section">
+            <h2>Three Eras, One Map</h2>
+            <div class="era-grid">
+                <div class="era-card">
+                    <h3>Era 1: Nation-Building</h3>
+                    <div class="years">1918–1945</div>
+                    <ul class="mechanics">
+                        <li>Found institutions from imperial rubble</li>
+                        <li>Land reform: radical vs. gradual</li>
+                        <li>Rail gauge choice — 100-year path dependency</li>
+                        <li>Ethnic accommodation or centralization</li>
+                    </ul>
+                </div>
+                <div class="era-card" style="border-left-color: var(--gold);">
+                    <h3>Era 2: Planned Development</h3>
+                    <div class="years">1945–1990</div>
+                    <ul class="mechanics">
+                        <li>Industrialize under external constraint</li>
+                        <li>30% policy autonomy — shape how, not whether</li>
+                        <li>Suppressed tensions accumulate invisibly</li>
+                        <li>Environmental damage builds silently</li>
+                    </ul>
+                </div>
+                <div class="era-card" style="border-left-color: var(--green);">
+                    <h3>Era 3: Convergence or Drift</h3>
+                    <div class="years">1990–2025</div>
+                    <ul class="mechanics">
+                        <li>System collapse — industrial legacy now a liability</li>
+                        <li>Full policy autonomy, full accountability</li>
+                        <li>EU accession track opens</li>
+                        <li>Every Era 1+2 decision comes due</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="era-section">
+            <h2>Core Systems</h2>
+            <div class="era-grid">
+                <div class="era-card">
+                    <h3>The D-Coefficient</h3>
+                    <div class="years">Master Variable · 0–100</div>
+                    <p style="margin-top:0.75rem; color: var(--muted);">How fast capability diffuses from cities to villages. Five sub-indices: infrastructure, institutions, human capital, information, geography. Era-adjusted weights.</p>
+                </div>
+                <div class="era-card" style="border-left-color: var(--gold);">
+                    <h3>Convergence Maps</h3>
+                    <div class="years">6 Attractor Basins</div>
+                    <p style="margin-top:0.75rem; color: var(--muted);">Phase space with gravitational pulls. Failed State Repeller → Extractive Growth Trap → Middle-Income Trap → Liberal/Coordinated/Developmental State attractors.</p>
+                </div>
+                <div class="era-card" style="border-left-color: var(--green);">
+                    <h3>Institutional DNA</h3>
+                    <div class="years">Depth × Quality</div>
+                    <p style="margin-top:0.75rem; color: var(--muted);">Institutions have depth (years operating) and quality (effectiveness). Deep + high quality = resilient. Deep + low quality = trap. Shallow = fragile but reformable.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2rem; color: var(--muted); font-size: 0.9rem;">
+            <p>Built from <a href="https://hheuristics.substack.com">Hunter Hughes'</a> original frameworks:</p>
+            <p style="margin-top:0.5rem;">
+                <strong>The Medium Coefficient (D-coefficient)</strong> ·
+                <strong>Convergence Maps</strong> ·
+                <strong>Diffusion, Not Invention</strong> ·
+                <strong>Grammar of the Century</strong>
+            </p>
+            <p style="margin-top: 1.5rem;">
+                <a href="https://github.com/Hunterhghs/Eastern-Europe-DE-VG">GitHub</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

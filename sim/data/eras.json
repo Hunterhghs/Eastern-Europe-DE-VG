@@ -1,0 +1,184 @@
+{
+  "eras": {
+    "era1_nation_building": {
+      "name": "Nation-Building",
+      "years": [1918, 1945],
+      "player_role": "Founding Government",
+      "policy_autonomy": 1.0,
+      "description": "Build the foundations of a modern state from imperial rubble. Your choices about institutions, infrastructure, and ethnic relations will echo for a century.",
+      "key_mechanics": [
+        "Land reform: radical vs. gradual",
+        "Language policy: which groups can access state jobs",
+        "Infrastructure gauge: standard (west) vs. broad (east)",
+        "Central bank: build early for monetary sovereignty",
+        "Education: invest in mass literacy or elite universities",
+        "Ethnic accommodation: federalism vs. centralization"
+      ],
+      "available_policies": [
+        "land_reform",
+        "language_policy",
+        "rail_gauge_choice",
+        "central_bank_founding",
+        "education_investment",
+        "ethnic_accommodation",
+        "tax_system_building",
+        "property_registry",
+        "statistical_office",
+        "judiciary_founding",
+        "military_doctrine",
+        "trade_alignment",
+        "public_health_basics",
+        "road_network",
+        "electrification_start"
+      ],
+      "external_constraints": {
+        "great_power_pressure": 0.7,
+        "trade_autonomy": "high",
+        "migration_openness": 0.6
+      },
+      "legacy_creation": {
+        "institutional_dna": "HIGH — foundations laid here persist forever",
+        "infrastructure_backbone": "HIGH — rail gauge and road network are 100-year path dependencies",
+        "ethnic_relations": "HIGH — accommodation or conflict patterns set for generations",
+        "human_capital_base": "MEDIUM — literacy investments compound across eras"
+      }
+    },
+    "era2_planned_development": {
+      "name": "Planned Development",
+      "years": [1945, 1990],
+      "player_role": "Planning Ministry (Constrained)",
+      "policy_autonomy": 0.3,
+      "description": "Industrialize rapidly under external geopolitical alignment. Your autonomy is constrained — you can shape how industrialization happens, but not whether it happens.",
+      "key_mechanics": [
+        "Industrial targeting: heavy industry vs. consumer goods",
+        "Urbanization management: planned cities vs. chaotic growth",
+        "Suppressed tensions: era 1 ethnic issues accumulate as invisible pressure",
+        "Environmental accumulation: pollution builds silently",
+        "Human capital: vocational training vs. academic education",
+        "Informal economy: suppressed but resilient"
+      ],
+      "available_policies": [
+        "industrial_targeting",
+        "urban_planning",
+        "collectivization_intensity",
+        "education_streaming",
+        "health_system_building",
+        "energy_grid",
+        "heavy_transport",
+        "housing_program",
+        "research_institutes",
+        "environmental_protection",
+        "cultural_policy",
+        "dissent_management"
+      ],
+      "external_constraints": {
+        "great_power_pressure": 0.9,
+        "trade_autonomy": "low",
+        "migration_openness": 0.1
+      },
+      "legacy_creation": {
+        "industrial_structure": "HIGH — determines transition difficulty in era 3",
+        "urban_systems": "HIGH — cities built now determine era 3 urban form",
+        "environmental_damage": "HIGH — accumulated pollution becomes era 3 cost",
+        "human_capital_profile": "HIGH — skills mix determines era 3 adaptability",
+        "suppressed_tensions": "HIGH — stored pressure releases in era 3 transition"
+      }
+    },
+    "era3_convergence": {
+      "name": "Convergence or Drift",
+      "years": [1990, 2025],
+      "player_role": "Democratic Government (Full Autonomy)",
+      "policy_autonomy": 1.0,
+      "description": "The system collapses. Your inherited industrial structure is now a liability. Suppressed tensions release. You have full policy autonomy — and full accountability. The EU accession track offers a structured convergence path.",
+      "key_mechanics": [
+        "Market transition: shock therapy vs. gradualism",
+        "EU accession: structured convergence with external discipline",
+        "Privatization: competitive vs. insider/crony",
+        "Deindustrialization: manage decline of era 2 heavy industry",
+        "Brain circulation: diaspora return vs. permanent drain",
+        "Environmental cleanup: era 2 pollution legacy costs",
+        "Pressure release: era 1+2 ethnic tensions surface"
+      ],
+      "available_policies": [
+        "privatization_method",
+        "eu_accession_track",
+        "market_reform_pace",
+        "banking_sector_reform",
+        "education_reform",
+        "health_system_reform",
+        "pension_system",
+        "environmental_cleanup",
+        "energy_transition",
+        "digital_infrastructure",
+        "foreign_investment_policy",
+        "diaspora_engagement",
+        "decentralization",
+        "anti_corruption",
+        "innovation_policy",
+        "social_safety_net",
+        "labor_market_reform"
+      ],
+      "external_constraints": {
+        "great_power_pressure": 0.3,
+        "trade_autonomy": "high",
+        "migration_openness": 0.8,
+        "eu_conditionality": "if on accession track: policy constraints + funding"
+      },
+      "scoring": {
+        "prosperity": "GDP per capita (PPP), Gini coefficient, poverty rate",
+        "resilience": "Economic diversification, fiscal health, institutional depth",
+        "human_development": "Life expectancy, education years, gender equality",
+        "sustainability": "Carbon intensity, environmental health, renewable share",
+        "convergence": "Distance to EU-15 average across all dimensions"
+      }
+    }
+  },
+  "transition_rules": {
+    "era1_to_era2": {
+      "trigger_year": 1945,
+      "forced": true,
+      "description": "Geopolitical realignment is imposed externally. Policy autonomy drops from 100% to 30%. Existing institutions persist but operate under new constraints.",
+      "carryover": [
+        "institutional_depth",
+        "institutional_quality",
+        "infrastructure_quality",
+        "rail_gauge",
+        "literacy_rate",
+        "life_expectancy",
+        "ethnic_fragmentation_index",
+        "ethnic_tension_stored",
+        "d_coefficient"
+      ],
+      "reset": [
+        "policy_autonomy -> 0.3",
+        "trade_network (forced realignment)",
+        "external_constraints (tightened)"
+      ]
+    },
+    "era2_to_era3": {
+      "trigger_year": 1990,
+      "forced": true,
+      "description": "The planned economy collapses. Policy autonomy returns to 100%. Industrial structure becomes a liability. Stored ethnic tensions release.",
+      "carryover": [
+        "institutional_depth",
+        "institutional_quality",
+        "infrastructure_quality",
+        "rail_gauge",
+        "literacy_rate",
+        "life_expectancy",
+        "urbanization_rate",
+        "industrial_structure (legacy)",
+        "environmental_damage_accumulated",
+        "human_capital_profile",
+        "d_coefficient",
+        "ethnic_tension_stored (now released)"
+      ],
+      "reset": [
+        "policy_autonomy -> 1.0",
+        "gdp_per_capita_ppp (shock adjustment: -15% to -35% depending on industrial structure)",
+        "trade_network (market reorientation)",
+        "external_constraints (loosened, EU track opens)"
+      ]
+    }
+  }
+}

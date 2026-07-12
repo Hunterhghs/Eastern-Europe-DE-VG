@@ -1,0 +1,209 @@
+{
+  "world": {
+    "name": "Carpathian Crescent",
+    "description": "A fictional Eastern European peninsula of five nations, each embodying real development archetypes.",
+    "era_start_year": 1918,
+    "era_end_year": 2025
+  },
+  "nations": {
+    "moravia_nord": {
+      "name": "Moravia-Nord",
+      "capital": "Nordhaven",
+      "population_1918_millions": 2.8,
+      "area_km2": 42000,
+      "geography": {
+        "coastal": true,
+        "landlocked": false,
+        "terrain": "flat_coastal",
+        "natural_resources": ["fish", "timber", "moderate_coal"],
+        "port_access": true,
+        "river_network": "moderate",
+        "description": "Small coastal nation with natural harbors and flat terrain. Compact geography makes infrastructure diffusion relatively cheap."
+      },
+      "ethnic_composition": {
+        "moravian": 0.82,
+        "nordic_settler": 0.12,
+        "other": 0.06
+      },
+      "ethnic_fragmentation_index": 0.31,
+      "era1_start": {
+        "gdp_per_capita_ppp": 2100,
+        "gini_coefficient": 0.48,
+        "literacy_rate": 0.72,
+        "life_expectancy": 54,
+        "urbanization_rate": 0.28,
+        "agricultural_labor_share": 0.62,
+        "industrial_labor_share": 0.18,
+        "institutional_legacy": "austro_hungarian",
+        "institutional_quality": 0.45,
+        "institutional_depth": 40,
+        "infrastructure_quality": 0.38,
+        "rail_km": 420,
+        "paved_road_km": 180,
+        "electricity_access_pct": 0.12,
+        "d_coefficient": 38
+      },
+      "legacy_description": "Austro-Hungarian administrative tradition provides strong institutional foundations — property registry, statistical office, and civil service already exist. High literacy relative to neighbors. The compact geography and port access give this nation the highest starting D-coefficient."
+    },
+    "zaleskia": {
+      "name": "Zaleskia",
+      "capital": "Zalesk",
+      "population_1918_millions": 8.2,
+      "area_km2": 128000,
+      "geography": {
+        "coastal": false,
+        "landlocked": true,
+        "terrain": "river_plains_uplands",
+        "natural_resources": ["coal_abundant", "iron_ore", "timber", "limestone"],
+        "port_access": false,
+        "river_network": "extensive",
+        "description": "Large landlocked nation with abundant coal and iron — the natural industrial powerhouse of the region. Extensive river network provides internal transport but no sea access."
+      },
+      "ethnic_composition": {
+        "zaleskian": 0.48,
+        "ruthenian": 0.28,
+        "german_settler": 0.14,
+        "jewish": 0.08,
+        "other": 0.02
+      },
+      "ethnic_fragmentation_index": 0.67,
+      "era1_start": {
+        "gdp_per_capita_ppp": 1800,
+        "gini_coefficient": 0.55,
+        "literacy_rate": 0.55,
+        "life_expectancy": 48,
+        "urbanization_rate": 0.22,
+        "agricultural_labor_share": 0.68,
+        "industrial_labor_share": 0.22,
+        "institutional_legacy": "mixed_imperial",
+        "institutional_quality": 0.32,
+        "institutional_depth": 25,
+        "infrastructure_quality": 0.30,
+        "rail_km": 890,
+        "paved_road_km": 310,
+        "electricity_access_pct": 0.08,
+        "d_coefficient": 26
+      },
+      "legacy_description": "A patchwork of former imperial territories stitched together. Mixed Austro-Hungarian and Russian institutional traditions create inconsistencies. High ethnic diversity is both cultural wealth and political challenge. The natural resource endowment makes heavy industry the obvious development path — but dependency risk is high."
+    },
+    "livonia_podolia": {
+      "name": "Livonia-Podolia",
+      "capital": "Livonsk",
+      "population_1918_millions": 5.1,
+      "area_km2": 94000,
+      "geography": {
+        "coastal": false,
+        "landlocked": true,
+        "terrain": "fertile_plains",
+        "natural_resources": ["agricultural_land_excellent", "limited_lignite"],
+        "port_access": false,
+        "river_network": "moderate",
+        "description": "Vast fertile plains — the breadbasket of the Crescent. Excellent agricultural potential but no mineral wealth. Landlocked with moderate river connections."
+      },
+      "ethnic_composition": {
+        "livonian": 0.62,
+        "podolian": 0.30,
+        "other": 0.08
+      },
+      "ethnic_fragmentation_index": 0.48,
+      "era1_start": {
+        "gdp_per_capita_ppp": 1400,
+        "gini_coefficient": 0.62,
+        "literacy_rate": 0.38,
+        "life_expectancy": 45,
+        "urbanization_rate": 0.14,
+        "agricultural_labor_share": 0.78,
+        "industrial_labor_share": 0.08,
+        "institutional_legacy": "ottoman",
+        "institutional_quality": 0.18,
+        "institutional_depth": 12,
+        "infrastructure_quality": 0.15,
+        "rail_km": 210,
+        "paved_road_km": 80,
+        "electricity_access_pct": 0.02,
+        "d_coefficient": 14
+      },
+      "legacy_description": "Ottoman-era landowner institutions dominate — large estates, weak state capacity, limited infrastructure. The landed elite resist modernization that threatens their labor supply. Highest inequality and lowest literacy in the region. But the agricultural potential is immense, and the young population represents a potential demographic dividend — if education and health investment arrive in time."
+    },
+    "vynahrad_republic": {
+      "name": "Vynahrad Republic",
+      "capital": "Vynagrad",
+      "population_1918_millions": 3.4,
+      "area_km2": 62000,
+      "geography": {
+        "coastal": false,
+        "landlocked": true,
+        "terrain": "mountainous",
+        "natural_resources": ["oil_major", "natural_gas", "minerals_diverse", "timber"],
+        "port_access": false,
+        "river_network": "limited",
+        "description": "Mountainous nation sitting on major oil and gas reserves. Strategic mountain passes make it a transit chokepoint. Rugged terrain fragments internal markets and raises infrastructure costs."
+      },
+      "ethnic_composition": {
+        "vynahrad": 0.55,
+        "mountain_tatar": 0.22,
+        "ruthenian": 0.15,
+        "other": 0.08
+      },
+      "ethnic_fragmentation_index": 0.61,
+      "era1_start": {
+        "gdp_per_capita_ppp": 1600,
+        "gini_coefficient": 0.58,
+        "literacy_rate": 0.42,
+        "life_expectancy": 46,
+        "urbanization_rate": 0.16,
+        "agricultural_labor_share": 0.65,
+        "industrial_labor_share": 0.12,
+        "institutional_legacy": "extractive_colonial",
+        "institutional_quality": 0.15,
+        "institutional_depth": 8,
+        "infrastructure_quality": 0.18,
+        "rail_km": 140,
+        "paved_road_km": 45,
+        "electricity_access_pct": 0.04,
+        "d_coefficient": 12
+      },
+      "legacy_description": "Resource wealth with extractive institutions — the classic 'resource curse' setup. Foreign companies control oil extraction; the state captures revenue without building capacity. Mountainous terrain fragments the internal market. Strategic location between powers means constant external pressure. Highest risk/reward nation — oil wealth could fund development or entrench corruption."
+    },
+    "karpathia": {
+      "name": "Karpathia",
+      "capital": "Karpagrad",
+      "population_1918_millions": 1.6,
+      "area_km2": 28000,
+      "geography": {
+        "coastal": false,
+        "landlocked": true,
+        "terrain": "alpine",
+        "natural_resources": ["timber", "hydropower_potential", "tourism_natural"],
+        "port_access": false,
+        "river_network": "limited",
+        "description": "Small alpine nation in strategic mountain passes. Limited resources but extraordinary natural beauty and a position straddling major trade routes. The smallest population — every person counts."
+      },
+      "ethnic_composition": {
+        "karpathian": 0.42,
+        "german_alpine": 0.28,
+        "slavic_highland": 0.22,
+        "other": 0.08
+      },
+      "ethnic_fragmentation_index": 0.65,
+      "era1_start": {
+        "gdp_per_capita_ppp": 1900,
+        "gini_coefficient": 0.42,
+        "literacy_rate": 0.68,
+        "life_expectancy": 52,
+        "urbanization_rate": 0.20,
+        "agricultural_labor_share": 0.55,
+        "industrial_labor_share": 0.15,
+        "institutional_legacy": "alpine_communal",
+        "institutional_quality": 0.38,
+        "institutional_depth": 30,
+        "infrastructure_quality": 0.22,
+        "rail_km": 180,
+        "paved_road_km": 95,
+        "electricity_access_pct": 0.10,
+        "d_coefficient": 22
+      },
+      "legacy_description": "Alpine communal traditions create surprisingly strong local institutions despite small size. High literacy from church schools. Multi-ethnic but with a tradition of confederal accommodation. The strategic transit position could make Karpathia a trade and finance hub — or a battleground. Hydropower potential offers a clean energy path. The smallest nation plays a completely different game from Zaleskia."
+    }
+  }
+}
